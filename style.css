@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Playpen+Sans:wght@600;400;900;&display=swap");
+
+/* Base rule */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Bungee Spice", sans-serif;
+  font-family: "Playpen Sans", cursive;
+}
+
+html {
+  font-size: 62.5%;
+}
+p,
+li,
+a {
+  font-size: 1.2rem;
+  letter-spacing: 0.2 rem;
+  font-weight: 400;
+  color: var(--para-color);
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+
+/* theme */
+
+:root {
+  --font-color: #233142;
+
+  --main-color: #455d7a;
+
+  --heading-color: #f95959;
+
+  --background-color: #e3e3e3;
+
+  --para-color: #504e4d;
+}
+
+/* layout */
+.container {
+  max-width: 80%;
+
+  margin: 0 auto;
+  padding: 9.6rem 2.4rem;
+}
+
+.grid {
+  display: grid;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 10rem;
+  gap: 30rem;
+}
+.grid-two--cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid-three--cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+/* reusable */
+.button {
+  display: inline-table;
+  padding: 1.2rem 3.6rem;
+  background-color: var(--heading-color);
+  color: var(--background-color);
+  border-radius: 0.6rem;
+  -webkit-border-radius: 0.6rem;
+  -moz-border-radius: 0.6rem;
+  -ms-border-radius: 0.6rem;
+  -o-border-radius: 0.6rem;
+}
+
+.section-common-heading {
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.section-common-subheading {
+  color: var(--para-color);
+}
+
+.section-common-title {
+  font-size: 1.5;
+  margin: 2rem 0 1rem 0;
+}
+
+/* states */
+
+.button:hover {
+  background-color: rgb(31, 109, 211);
+  cursor: pointer;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+/***** navbar section *****/
+.section-navber {
+  width: 100%;
+  height: 10.2rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.section-navber .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.1rem;
+}
+.section-navber .navbar ul {
+  display: flex;
+  gap: 2rem;
+
+  & li a {
+    color: var(--heading-color);
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.6rem;
+    display: inline block;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      border-bottom: 0.2rem solid var(--main-color);
+    }
+  }
+  & li a:hover::after {
+    width: 100%;
+  }
+}
+
+/***** End navbar section *****/
+
+/***** Hero Section *****/
+main {
+  background-image: linear-gradient(
+    to top right,
+    rgba(138, 136, 167, 1) 0%,
+    rgba(179, 31, 44, 1) 35%,
+    rgba(0, 11, 13, 1) 100%
+  );
+}
+.section-hero {
+  height: 50rem;
+}
+
+.section-hero .hero-subheading {
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  font-size: 1.5;
+  color: var(--background-color);
+  font-weight: 900;
+  margin-top: -5rem;
+}
+
+.section-hero .hero-heading {
+  font-size: 3.2rem;
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+  word-spacing: 0.8rem;
+  font-weight: 500;
+  margin-top: 1rem;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+.section-hero .hero-para {
+  color: beige;
+  margin: 3rem 0 6rem 0;
+  font-size: 15px;
+  font-weight: 400;
+  word-spacing: 0.4rem;
+  line-height: 1.5;
+}
+.section-hero .grid {
+  align-items: center;
+  gap: 30rem;
+}
+.section-hero--img {
+  width: 100%;
+  height: auto;
+}
+
+/***** End Hero Section *****/
+
+/***** about section *****/
+.section-about .about-div {
+  text-align: center;
+}
+.section-about img {
+  padding: 2rem;
+  background-color: var(--heading-color);
+  width: 15rem;
+  height: auto;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+}
+
+.icon:hover > img {
+  rotate: 360deg;
+  background-color: rgb(90, 213, 222);
+}
+/***** End about section *****/
